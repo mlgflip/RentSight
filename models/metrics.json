@@ -1,0 +1,42 @@
+{
+  "cutoff_date": "2025-02-05",
+  "n_train": 118789,
+  "n_test": 29698,
+  "features": [
+    "zip",
+    "sqft",
+    "beds",
+    "baths",
+    "age_at_sale",
+    "lot_size",
+    "is_condo",
+    "dist_coast_km",
+    "sale_month",
+    "sale_year"
+  ],
+  "best_params": {
+    "gb__l2_regularization": 0.00458,
+    "gb__learning_rate": 0.02087,
+    "gb__max_depth": 11,
+    "gb__max_iter": 493,
+    "gb__min_samples_leaf": 10
+  },
+  "metrics_test": {
+    "baseline_zip_median_ppsf": {
+      "MAE": 2230.8,
+      "RMSE": 6603.9,
+      "R2": 0.3307
+    },
+    "baseline_linear": {
+      "MAE": 2707.9,
+      "RMSE": 6352.2,
+      "R2": 0.3808
+    },
+    "hist_gradient_boosting": {
+      "MAE": 1150.8,
+      "RMSE": 3015.9,
+      "R2": 0.8604
+    }
+  },
+  "label": "est_rent = sale_price x zip ZORI/ZHVI ratio (monthly) (derived, not observed rent)"
+}
